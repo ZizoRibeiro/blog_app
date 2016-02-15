@@ -21,8 +21,11 @@ Rails.application.configure do
 
   # Raise an error on page load if there are pending migrations.
   config.active_record.migration_error = :page_load
-
-  # Debug mode disables concatenation and preprocessing of assets.
+	
+	# Still want to run Web Console in the test environment.
+	config.web_console.development_only = false
+ 
+	# Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
