@@ -1,6 +1,7 @@
   class ArticlesController < ApplicationController
-    def index
-      @articles = Article.all
+
+  def index
+    @articles = Article.all
   end
 
 
@@ -21,7 +22,21 @@
 
   def show
     @article = Article.find(params[:id])
+  end
 
+  def edit
+    @article = Article.find(params[:id])
+  end
+
+  def update
+    @article = Article.find(params[:id])
+    if @article.update(article_params)
+      flash[:success] = "Article has been Updated"
+      redirect_to @article
+    else
+      flash.now[:danger] = "Article has not been updated"
+      render :edit
+    end
   end
 
   private
