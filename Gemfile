@@ -5,6 +5,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.0'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
+gem 'devise', '~>3.5.1'
 # Use SCSS for stylesheets
 gem 'bootstrap-sass', '~>3.3.4.1'
 gem 'autoprefixer-rails', '~>5.2.0'
@@ -36,9 +37,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'web-console', '~> 2.0', group: :development
 
 group :development, :test do
-	gem 'rspec-rails', '3.2.3'
-	gem 'guard-rspec', require: false
-	gem 'spring-commands-rspec'
+  gem 'rspec-rails', '3.2.3'
+  gem 'guard-rspec', require: false
+  gem 'spring-commands-rspec'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
@@ -50,6 +51,6 @@ group :development, :test do
 end
 
 group :test do
-	gem 'capybara', '2.4.4'
+  gem 'capybara', '2.4.4'
 end
 
