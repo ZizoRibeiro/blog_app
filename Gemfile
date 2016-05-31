@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
 gem 'devise', '~>3.5.1'
 # Use SCSS for stylesheets
 gem 'bootstrap-sass', '~>3.3.4.1'
@@ -37,6 +37,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'web-console', '~> 2.0', group: :development
 
 group :development, :test do
+  gem 'sqlite3'
   gem 'rspec-rails', '3.2.3'
   gem 'guard-rspec', require: false
   gem 'spring-commands-rspec'
@@ -52,5 +53,10 @@ end
 
 group :test do
   gem 'capybara', '2.4.4'
+end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
 end
 
